@@ -1,4 +1,4 @@
-title                                  = "KiteAB's Blog"
+title                                  = "K1t3AB's Blog"
 baseURL                                = "https://www.kiteab.me"
 languageCode                           = "en-us"
 theme                                  = "DoIt"
@@ -16,13 +16,13 @@ hasCJKLanguage                         = true
   filename                             = "sitemap.xml"
 
 [author]
-  name                                 = "KiteAB"
-  email                                = "kiteabpl@outlook.com"
+  name                                 = "K1t3AB"
+  email                                = "kiteab233@proton.me"
   link                                 = "https://www.kiteab.me"
 
 [params]
   version                              = "0.2.X"
-  author                               = "KiteAB"
+  author                               = "K1t3AB"
   keywords                             = ["KiteAB", "ArchLinux", "Git", "C++"]
   defaultTheme                         = "light"
   dateFormat                           = "2006年01月02日"
@@ -32,7 +32,7 @@ hasCJKLanguage                         = true
   background_color_class               = "bg-black"
   recent_posts_number                  = 2
   [params.app]
-    title                              = "KiteAB's Blog"
+    title                              = "K1t3AB's Blog"
     noFavicon                          = false
     svgFavicon                         = ""
     themeColor                         = "#ffffff"
@@ -56,7 +56,7 @@ hasCJKLanguage                         = true
     mobileMode                         = "auto"
     [params.header.title]
       logo                             = ""
-      name                             = "KiteAB's Blog"
+      name                             = "K1t3AB's Blog"
       pre                              = ""
       typeit                           = false
   [params.footer]
@@ -81,7 +81,7 @@ hasCJKLanguage                         = true
       enable                           = true
       gravatarEmail                    = ""
       avatarURL                        = "/images/avatar.png"
-      title                            = "KiteAB's Blog"
+      title                            = "K1t3AB's Blog"
       subtitle                         = "Just 4 fun."
       typeit                           = true
       social                           = true
@@ -93,7 +93,7 @@ hasCJKLanguage                         = true
   [params.social]
     GitHub                             = "KiteAB"
     Bilibili                           = "387229912"
-    Email                              = "kiteabpl@outlook.com"
+    Email                              = "kiteab233@proton.me"
     RSS                                = true
   [params.page]
     hiddenFromHomePage                 = false
@@ -213,8 +213,8 @@ hasCJKLanguage                         = true
     cursorSpeed                        = 1000
     cursorChar                         = "|"
     duration                           = -1
-  [params.cdn]
-    data = "jsdelivr.yml"
+#  [params.cdn]
+#    data = "jsdelivr.yml"
 
 [menu]
   [[menu.main]]
