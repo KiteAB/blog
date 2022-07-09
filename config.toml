@@ -203,9 +203,9 @@ hasCJKLanguage                         = true
       [params.page.comment.utterances]
         enable                         = true
         # owner/repo
-        repo                           = "KiteAB/blog-comments"
+        repo                           = "KiteAB/KiteAB"
         issueTerm                      = "title"
-        label                          = ""
+        label                          = "blog"
         lightTheme                     = "github-light"
         darkTheme                      = "github-dark"
   [params.typeit]
