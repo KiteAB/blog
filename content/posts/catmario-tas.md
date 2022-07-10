@@ -31,11 +31,11 @@ tags:
 [点我下载模拟器以及游戏文件](https://pan.baidu.com/share/link?shareid=3242248356&amp;uk=3120686554)
 
 解压缩后可以看到TAS的文件夹，打开后里面有两个文件夹，一个是Catmario，一个是Hourglass。我们要打开的是Hourglass文件夹里的“模拟器”文件。
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas1.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas2.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas1.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas2.jpg)
 
 打开以后看到这样的画面，按图示操作
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas3.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas3.jpg)
 
 然后Hourglass会自动在Hourglass文件夹内创造同名的wtf录像文件，这个录像文件是纪录按键用的，也就是等下你打TAS时每一帧记录按键的文件。
 
@@ -63,10 +63,10 @@ tags:
 这时，你可以在任何时候，点击模拟器右边的“暂停”，你会发现，游戏居然停住了！然后，你可以敲击一下空格键，你又会发现，整个游戏只动了一点点！这是因为模拟器把游戏一秒钟的操作分配到了30帧，所以你就可以做很精确的操作了！
 
 比如这样~
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas4.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas4.jpg)
 
 比如这样~
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas5.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas5.jpg)
 
 厉害吧！还有更厉害的呢，你可以在任何时候按 Shift + 1 来保存一个存档，然后当你玩着玩着突然死了以后，按下 1 ，你会发现：游戏又从你保存的地方开始了！
 
@@ -79,10 +79,10 @@ tags:
 接下来说明一下按键文件转AVI录像的功能，选择【AVI】→【捕捉视频+音频】，然后点击【运行并播放现有录像】，会提示保存AVI录像文件在哪里，选择好以后就开始播放录像，在合适的时候停止运行，你会发现AVI录像文件已经保存好了，帧率都不变，非常高清！但是文件大小比较大，推荐用岛国的软件 TMPGEnc 4.0 压缩，也可以用Winrar或者2345好压打成压缩包~
 
 前面已经把Hourglass大部分基础的内容讲完了，但是实际上这款模拟器还有一个强大又是必备的功能：内存搜索与监视！内存搜索就不教大家了，这里我把我亲自搜索整理出来的内存值分享给大家。首先点击Hourglass的【工具】→【内存监视】，跳出这样一个框框
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas6.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas6.jpg)
 
 在这个框框中按【添加】
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas7.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas7.jpg)
 
 打开的窗口中按上图输入地址、注释，选择数据大小后确定
 用同样的方法添加以下内容
@@ -98,29 +98,29 @@ tags:
 然后不要关这个内存监视，你再去录一下看看~是不是感觉非常高级！
 
 好，有了这两个，我们就开始速通录像的录制吧！
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas8.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas8.jpg)
 
 首先当然是调整好帧数和系统时间及其他设置，然后先点击【暂停】，按下【运行并录制新录像】后马上按住Enter！如果你第8帧就进入了黑屏画面，说明一开始你的速度是最快的！
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas9.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas9.jpg)
 
 这时候你就要按住右，然后用空格键步进，确保你开始你就在加速！
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas10.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas10.jpg)
 
 可以看到画面刚出现，你的横速度已经达到了80，这就是TAS方法之一：黑屏加速法！
 
 TAS方法之二：边缘起跳与边缘落脚法如果我们想要让TAS变得更快，那么我们就要让它多加速一会，所以当然要加速到最边缘再起跳！值得一提的是，Catmario的【起跳判定】特别坑，它是计算你z按键的次数，如果是双数的话就可以起跳，如果是单数的话就不能起跳- -
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas11.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas11.jpg)
 （前一帧已经按下z，单数不起跳）
 
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas12.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas12.jpg)
 （又按了一帧z，双数起跳）
 
 边缘落脚：即使你没有真正踩到地板，由于边缘判定的bug，也会上去！
 
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas13.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas13.jpg)
 （啊我要掉下去了~~~）
 
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas14.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas14.jpg)
 （哇，我竟然跳上来了喵！）
 
 TAS方法之三：二段跳、斜角穿墙、纵向穿墙
@@ -128,39 +128,39 @@ TAS方法之三：二段跳、斜角穿墙、纵向穿墙
 这应该是Catmario TAS 中最吸引人的部分了！让人无法理解的是，穿墙的判定条件真是奇怪得让人无语：不需要速度快（纵向穿墙），也不需要准确的按键，甚至你根本就不知道哪一个点可以卡墙！！所以，卡墙与穿墙真的是靠运气的事情，下面给大家截取几个样本图：
 
 ① 横速度 -709，猫与墙距离4像素，斜角穿墙
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas15.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas16.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas15.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas16.jpg)
 
 ② 横速度 734，猫与墙距离3像素，二段跳
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas17.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas18.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas17.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas18.jpg)
 
 ③ 横速度 717，猫与墙距离4像素，斜角穿墙
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas19.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas20.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas19.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas20.jpg)
 
 ④ 横速度 761，猫与墙距离6像素，斜角穿（隐形砖）墙
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas21.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas22.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas21.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas22.jpg)
 
 ⑤ 横速度 717，猫与墙距离4像素，二段跳
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas23.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas24.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas23.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas24.jpg)
 
 ⑥ 横速度 634，猫与墙距离4像素，二段跳
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas25.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas26.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas25.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas26.jpg)
 
 ⑦ 横速度-534，纵速度800，猫与墙距离4像素，二段跳
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas27.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas28.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas27.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas28.jpg)
 
 ⑧ 横速度800，纵速度633，猫与墙距离4像素，斜角穿墙
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas29.jpg)
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas30.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas29.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas30.jpg)
 
 （由于博客再放例子会原地爆炸，所以直接放总结图了）
-![image](https://kiteab.github.io/images/blog/catmariotas/catmariotas31.jpg)
+![image](https://kiteab.me/images/blog/catmariotas/catmariotas31.jpg)
 
 
 二段跳和斜角穿墙一般要求与墙距离4像素，横速度的绝对值≥520

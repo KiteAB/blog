@@ -50,7 +50,7 @@ NeoVim 和 Vim 都拥有自己的图形化界面，也就是 GTK/QT 版，但我
 
 gedit 是一款图形化的文本编辑器，是 GNOME 默认的文本编辑器，不过我很少用它。类似产品还有 KDE 自带的 Kate，不用的原因是过于臃肿
 
-![](https://kiteab.awa.im/images/blog/app/gedit.png)
+![](https://kiteab.me/images/blog/app/gedit.png)
 
 小声 BB: 其实用它只是因为在 MC 里输入不了中文用它输入在粘贴进去而已 XD
 
@@ -62,13 +62,13 @@ Info: 就不说 Top 了，那玩意现在基本没人用了
 
 Htop 是一款全能的系统监视软件，虽然有点丑，但是监视得还是比较全面了，也能做些杀程操作啥的
 
-![](https://kiteab.awa.im/images/blog/app/htop.png)
+![](https://kiteab.me/images/blog/app/htop.png)
 
 ### BashTop
 
 BashTop 是一款**非常好看且实用**的监控软件，它不仅能监视 CPU、内存、硬盘等占用情况，还能监控单个进程的运行情况、占用等！
 
-![](https://kiteab.awa.im/images/blog/app/bashtop.png)
+![](https://kiteab.me/images/blog/app/bashtop.png)
 
 ## 截图类
 
@@ -76,7 +76,7 @@ BashTop 是一款**非常好看且实用**的监控软件，它不仅能监视 C
 
 Flameshot，中文名火焰截图，是一款在 Linux 上使用的截屏工具，在截图后也可以进行编辑操作，可以说是 Linux 版的 Snipaste！
 
-![](https://kiteab.awa.im/images/blog/app/flameshot.png)
+![](https://kiteab.me/images/blog/app/flameshot.png)
 
 ### Scrot
 
@@ -90,25 +90,25 @@ Scrot 是一个命令行独占的万能截图工具，如果不在后面传参�
 
 Chrome 浏览器，必备，就是内存占用有点高
 
-![](https://kiteab.awa.im/images/blog/app/chrome.png)
+![](https://kiteab.me/images/blog/app/chrome.png)
 
 ### Feh
 
 Feh 是一个图片查看软件，当然，也可以用它来指定图片切换壁纸，操作为仅命令行
 
-![](https://kiteab.awa.im/images/blog/app/feh.png)
+![](https://kiteab.me/images/blog/app/feh.png)
 
 ### mpv
 
 mpv 是一个音视频播放软件，当然，也可以把它调教好做图片查看器，但是不推荐，操作命令行独占
 
-![](https://kiteab.awa.im/images/blog/app/mpv.png)
+![](https://kiteab.me/images/blog/app/mpv.png)
 
 ### Lazygit
 
 Lazygit 是一个 Git 的懒人版本，有在终端的 "UI"，支持自定义快捷键
 
-![](https://kiteab.awa.im/images/blog/app/lazygit.png)
+![](https://kiteab.me/images/blog/app/lazygit.png)
 
 ---
 
