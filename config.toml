@@ -166,8 +166,8 @@ hasCJKLanguage                         = true
         enable                         = false
         owner                          = "KiteAB"
         repo                           = "blog-comments"
-        clientId                       = "eb172f48679bb713fb74"
-        clientSecret                   = "0863251f0ecba7738786bc1ff2018a46e5ab32bd"
+        clientId                       = ""
+        clientSecret                   = ""
       [params.page.comment.valine]
         enable                         = false
         appId                          = ""
