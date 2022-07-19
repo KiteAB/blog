@@ -1,5 +1,5 @@
 title                                  = "K1t3AB's Blog"
-baseURL                                = "https://www.kiteab.me"
+baseURL                                = "https://blog.kiteab.me"
 languageCode                           = "en-us"
 theme                                  = "DoIt"
 MetaDataFormat                         = "yaml"
@@ -18,7 +18,7 @@ hasCJKLanguage                         = true
 [author]
   name                                 = "K1t3AB"
   email                                = "kiteab233@proton.me"
-  link                                 = "https://www.kiteab.me"
+  link                                 = "https://blog.kiteab.me"
 
 [params]
   version                              = "0.2.X"
