@@ -10,6 +10,6 @@
     <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
         <name>K1t3AB</name>
     </author><guid>https://blog.kiteab.me/posts/emacs-xah-magit/</guid>
-    <description><![CDATA[<p>虽然说没几个人把 <a href="https://github.com/xahlee/xah-fly-keys" target="_blank" rel="noopener noreffer">Xah Fly Keys</a> 和 <a href="https://github.com/magit/magit" target="_blank" rel="noopener noreffer">Magit</a> 放在一起用, 不过还是想讲讲解决一些问题的思路.</p>]]></description>
+    <description><![CDATA[虽然说没几个人把 Xah Fly Keys 和 Magit 放在一起用, 不过还是想讲讲解决一些问题的思路. 遇到问题最近开始尝试使用 Xah Fly Keys, Emacs 的默认键位虽然很好记, 但是还是有点费]]></description>
 </item></channel>
 </rss>
