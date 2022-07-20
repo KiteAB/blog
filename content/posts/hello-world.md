@@ -6,8 +6,6 @@ draft: true
 
 ### 这是我的第一篇博文
 
-<!--more-->
-
 #### 本博客使用 **Hugo** 引擎进行搭建
 
 ## Test Part

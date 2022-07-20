@@ -10,8 +10,6 @@ tags:
 
 虽然说没几个人把 [Xah Fly Keys](https://github.com/xahlee/xah-fly-keys) 和 [Magit](https://github.com/magit/magit) 放在一起用, 不过还是想讲讲解决一些问题的思路.
 
-<!--more-->
-
 ## 遇到问题
 
 最近开始尝试使用 `Xah Fly Keys`, Emacs 的默认键位虽然很好记, 但是还是有点费手, 一只手价格还是不菲的 (大雾)
