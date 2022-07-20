@@ -1,0 +1,30 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>arch - 标签 - K1t3AB&#39;s Blog</title>
+        <link>https://blog.kiteab.me/tags/arch/</link>
+        <description>arch - 标签 - K1t3AB&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
+            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/arch/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch 上的备份还原</title>
+    <link>https://blog.kiteab.me/posts/arch-backup-forward/</link>
+    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
+        <name>K1t3AB</name>
+    </author><guid>https://blog.kiteab.me/posts/arch-backup-forward/</guid>
+    <description><![CDATA[<p>入坑Arch，主要方便自己查询和刚入坑经常玩挂的朋友，其他发行版应该大同小异</p>]]></description>
+</item><item>
+    <title>记一次系统出错及备份过程</title>
+    <link>https://blog.kiteab.me/posts/arch-backup/</link>
+    <pubDate>Fri, 21 Aug 2020 17:41:24 &#43;0800</pubDate><author>
+        <name>K1t3AB</name>
+    </author><guid>https://blog.kiteab.me/posts/arch-backup/</guid>
+    <description><![CDATA[<p>想必各位的电脑也经常会出现内存溢出现象吧, 但是如果溢出后强制重启的话是有几率导致文件系统损坏的, 此博文记录一次损坏及备份过程</p>]]></description>
+</item><item>
+    <title>Arch Linux 常用软件</title>
+    <link>https://blog.kiteab.me/posts/arch-software/</link>
+    <pubDate>Fri, 10 Jul 2020 17:36:21 &#43;0800</pubDate><author>
+        <name>K1t3AB</name>
+    </author><guid>https://blog.kiteab.me/posts/arch-software/</guid>
+    <description><![CDATA[<h4 id="最近有人推荐我做一个-arch-下的软件推荐所以come-on" class="headerLink">
+    <a href="#%e6%9c%80%e8%bf%91%e6%9c%89%e4%ba%ba%e6%8e%a8%e8%8d%90%e6%88%91%e5%81%9a%e4%b8%80%e4%b8%aa-arch-%e4%b8%8b%e7%9a%84%e8%bd%af%e4%bb%b6%e6%8e%a8%e8%8d%90%e6%89%80%e4%bb%a5come-on" class="header-mark"></a>最近有人推荐我做一个 Arch 下的软件推荐，所以，Come on!</h4>]]></description>
+</item></channel>
+</rss>

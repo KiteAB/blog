@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>软件 - 标签 - K1t3AB&#39;s Blog</title>
+        <link>https://blog.kiteab.me/tags/%E8%BD%AF%E4%BB%B6/</link>
+        <description>软件 - 标签 - K1t3AB&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
+            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Fri, 10 Jul 2020 17:36:21 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/%E8%BD%AF%E4%BB%B6/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch Linux 常用软件</title>
+    <link>https://blog.kiteab.me/posts/arch-software/</link>
+    <pubDate>Fri, 10 Jul 2020 17:36:21 &#43;0800</pubDate><author>
+        <name>K1t3AB</name>
+    </author><guid>https://blog.kiteab.me/posts/arch-software/</guid>
+    <description><![CDATA[<h4 id="最近有人推荐我做一个-arch-下的软件推荐所以come-on" class="headerLink">
+    <a href="#%e6%9c%80%e8%bf%91%e6%9c%89%e4%ba%ba%e6%8e%a8%e8%8d%90%e6%88%91%e5%81%9a%e4%b8%80%e4%b8%aa-arch-%e4%b8%8b%e7%9a%84%e8%bd%af%e4%bb%b6%e6%8e%a8%e8%8d%90%e6%89%80%e4%bb%a5come-on" class="header-mark"></a>最近有人推荐我做一个 Arch 下的软件推荐，所以，Come on!</h4>]]></description>
+</item></channel>
+</rss>

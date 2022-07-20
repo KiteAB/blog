@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>还原 - 标签 - K1t3AB&#39;s Blog</title>
+        <link>https://blog.kiteab.me/tags/%E8%BF%98%E5%8E%9F/</link>
+        <description>还原 - 标签 - K1t3AB&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
+            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/%E8%BF%98%E5%8E%9F/" rel="self" type="application/rss+xml" /><item>
+    <title>Arch 上的备份还原</title>
+    <link>https://blog.kiteab.me/posts/arch-backup-forward/</link>
+    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
+        <name>K1t3AB</name>
+    </author><guid>https://blog.kiteab.me/posts/arch-backup-forward/</guid>
+    <description><![CDATA[<p>入坑Arch，主要方便自己查询和刚入坑经常玩挂的朋友，其他发行版应该大同小异</p>]]></description>
+</item></channel>
+</rss>
