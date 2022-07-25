@@ -1,0 +1,273 @@
+title                                  = "K1t3AB's Blog"
+baseURL                                = "https://blog.kiteab.me"
+languageCode                           = "en-us"
+theme                                  = "DoIt"
+MetaDataFormat                         = "yaml"
+DefaultContentLanguage                 = "zh-cn"
+SectionPagesMenu                       = "main"
+Paginate                               = 3
+googleAnalytics                        = ""
+enableRobotsTXT                        = true
+hasCJKLanguage                         = true
+
+[sitemap]
+  changefreq                           = "monthly"
+  priority                             = 0.5
+  filename                             = "sitemap.xml"
+
+[author]
+  name                                 = "K1t3AB"
+  email                                = "kiteab233@proton.me"
+  link                                 = "https://blog.kiteab.me"
+
+[params]
+  version                              = "0.2.X"
+  author                               = "K1t3AB"
+  keywords                             = ["KiteAB", "ArchLinux", "Git", "C++"]
+  defaultTheme                         = "light"
+  dateFormat                           = "2006年01月02日"
+  images                               = ["/favicon.ico"]
+  description                          = "Bilibili: KiteAB"
+  github                               = "https://github.com/KiteAB"
+  background_color_class               = "bg-black"
+  recent_posts_number                  = 2
+  [params.app]
+    title                              = "K1t3AB's Blog"
+    noFavicon                          = false
+    svgFavicon                         = ""
+    themeColor                         = "#ffffff"
+    iconColor                          = "#5bbad5"
+    tileColor                          = "#da532c"
+  [params.search]
+    enable                             = true
+    type                               = "lunr"
+    contentLength                      = 4000
+    placeholder                        = ""
+    maxResultLength                    = 10
+    snippetLength                      = 50
+    highlightTag                       = "em"
+    absoluteURL                        = false
+    [params.search.algolia]
+      index                            = ""
+      appID                            = ""
+      searchKey                        = ""
+  [params.header]
+    desktopMode                        = "fixed"
+    mobileMode                         = "auto"
+    [params.header.title]
+      logo                             = ""
+      name                             = "K1t3AB's Blog"
+      pre                              = ""
+      typeit                           = false
+  [params.footer]
+    enable                             = true
+    hugo                               = true
+    copyright                          = true
+    author                             = true
+    since                              = 2019
+    icp                                = ""
+    license                            = '<a rel                                                                          = "license external nofollow noopener noreffer" href = "https://creativecommons.org/licenses/by-nc/4.0/" target = "_blank">CC BY-NC 4.0</a>'
+  [params.section]
+    paginate                           = 20
+    dateFormat                         = "01月02日"
+    rss                                = 10
+  [params.list]
+    paginate                           = 20
+    dateFormat                         = "01月02日"
+    rss                                = 10
+  [params.home]
+    rss                                = 10
+    [params.home.profile]
+      enable                           = true
+      gravatarEmail                    = ""
+      avatarURL                        = "/images/avatar.png"
+      title                            = "K1t3AB's Blog"
+      subtitle                         = "Just 4 fun."
+      typeit                           = true
+      social                           = true
+      disclaimer                       = ""
+    [params.home.posts]
+      enable                           = true
+      paginate                         = 6
+      defaultHiddenFromHomePage        = false
+  [params.social]
+    GitHub                             = "KiteAB"
+    Bilibili                           = "387229912"
+    Email                              = "kiteab233@proton.me"
+    RSS                                = true
+  [params.page]
+    hiddenFromHomePage                 = false
+    hiddenFromSearch                   = false
+    twemoji                            = false
+    lightgallery                       = false
+    ruby                               = true
+    fraction                           = true
+    fontawesome                        = true
+    linkToMarkdown                     = true
+    rssFullText                        = false
+    [params.page.toc]
+      enable                           = true
+      keepStatic                       = true
+      auto                             = true
+    [params.page.code]
+      copy                             = true
+      maxShownLines                    = 10
+    [params.page.math]
+      enable                           = true
+      blockLeftDelimiter               = ""
+      blockRightDelimiter              = ""
+      inlineLeftDelimiter              = ""
+      inlineRightDelimiter             = ""
+      copyTex                          = true
+      mhchem                           = true
+    [params.page.mapbox]
+      accessToken                      = ""
+      lightStyle                       = "mapbox://styles/mapbox/light-v9"
+      darkStyle                        = "mapbox://styles/mapbox/dark-v9"
+      navigation                       = true
+      geolocate                        = true
+      scale                            = true
+      fullscreen                       = true
+    [params.page.share]
+      enable                           = true
+      Twitter                          = true
+      Facebook                         = true
+      Linkedin                         = false
+      Whatsapp                         = false
+      Pinterest                        = false
+      Tumblr                           = false
+      HackerNews                       = false
+      Reddit                           = true
+      VK                               = false
+      Buffer                           = false
+      Xing                             = false
+      Line                             = false
+      Instapaper                       = false
+      Pocket                           = false
+      Digg                             = false
+      Stumbleupon                      = false
+      Flipboard                        = false
+      Weibo                            = true
+      Renren                           = false
+      Myspace                          = false
+      Blogger                          = false
+      Baidu                            = true
+      Odnoklassniki                    = false
+      Evernote                         = false
+      Skype                            = false
+      Trello                           = false
+      Mix                              = false
+    [params.page.comment]
+      enable                           = true
+      [params.page.comment.disqus]
+        enable                         = false
+        shortname                      = ""
+      [params.page.comment.gitalk]
+        enable                         = false
+        owner                          = "KiteAB"
+        repo                           = "blog-comments"
+        clientId                       = ""
+        clientSecret                   = ""
+      [params.page.comment.valine]
+        enable                         = false
+        appId                          = ""
+        appKey                         = ""
+        placeholder                    = ""
+        avatar                         = "mp"
+        meta                           = ""
+        pageSize                       = 10
+        lang                           = ""
+        visitor                        = true
+        recordIP                       = true
+        highlight                      = true
+        enableQQ                       = false
+        serverURLs                     = ""
+        emoji                          = ""
+      [params.page.comment.facebook]
+        enable                         = false
+        width                          = "100%"
+        numPosts                       = 10
+        appId                          = ""
+        languageCode                   = "zh_CN"
+      [params.page.comment.telegram]
+        enable                         = false
+        siteID                         = ""
+        limit                          = 5
+        height                         = ""
+        color                          = ""
+        colorful                       = true
+        dislikes                       = false
+        outlined                       = false
+      [params.page.comment.commento]
+        enable                         = false
+      [params.page.comment.utterances]
+        enable                         = true
+        # owner/repo
+        repo                           = "KiteAB/KiteAB"
+        issueTerm                      = "title"
+        label                          = "blog"
+        lightTheme                     = "github-light"
+        darkTheme                      = "github-dark"
+  [params.typeit]
+    speed                              = 100
+    cursorSpeed                        = 1000
+    cursorChar                         = "|"
+    duration                           = -1
+#  [params.cdn]
+#    data = "jsdelivr.yml"
+
+[menu]
+  [[menu.main]]
+    identifier                         = "posts"
+    pre                                = ""
+    post                               = ""
+    name                               = "文章"
+    url                                = "/posts/"
+    title                              = ""
+    weight                             = 1
+  [[menu.main]]
+    identifier                         = "tags"
+    pre                                = ""
+    post                               = ""
+    name                               = "标签"
+    url                                = "/tags/"
+    title                              = ""
+    weight                             = 2
+  [[menu.main]]
+    identifier                         = "friends"
+    pre                                = ""
+    post                               = ""
+    name                               = "友链"
+    url                                = "/friends/"
+    title                              = ""
+    weight                             = 2
+  [[menu.main]]
+    identifier                         = "about"
+    pre                                = ""
+    post                               = ""
+    name                               = "关于"
+    url                                = "/about/"
+    title                              = ""
+    weight                             = 2
+
+[markup]
+  [markup.highlight]
+    codeFences                         = true
+    guessSyntax                        = true
+    lineNos                            = true
+    lineNumbersInTable                 = true
+    noClasses                          = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList                   = true
+      footnote                         = true
+      linkify                          = true
+      strikethrough                    = true
+      table                            = true
+      taskList                         = true
+      typographer                      = true
+    [markup.goldmark.renderer]
+      unsafe                           = true
+  [markup.tableOfContents]
+    startLevel                         = 2
+    endLevel                           = 6

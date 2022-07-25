@@ -1,7 +1,6 @@
 ---
 title: "Xah Fly Keys 与 Magit 的组合方案 (Deprecated)"
 date: 2020-12-13T20:52:42+08:00
-draft: true
 tags:
     - emacs
     - magit
@@ -9,6 +8,8 @@ tags:
 ---
 
 虽然说没几个人把 [Xah Fly Keys](https://github.com/xahlee/xah-fly-keys) 和 [Magit](https://github.com/magit/magit) 放在一起用, 不过还是想讲讲解决一些问题的思路.
+
+<!--more-->
 
 ## 遇到问题
 

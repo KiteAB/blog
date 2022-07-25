@@ -1,8 +1,9 @@
 ---
 title: "Hello World"
 date: 2020-06-14T16:07:10+08:00
-draft: true
 ---
+
+<!--more-->
 
 ### 这是我的第一篇博文
 

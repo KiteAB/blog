@@ -1,7 +1,6 @@
 ---
 title: "Arch Linux 常用软件"
 date: 2020-07-10T17:36:21+08:00
-draft: true
 tags: 
     - 软件
     - 推荐
@@ -10,22 +9,9 @@ tags:
     - 常用
 ---
 
-## 目录
+2020 的我的常用软件
 
-* [编辑篇](#编辑篇)
-	- [NeoVim](#neovim)
-	- [Gedit](#gedit)
-* [监视类](#监视类)
-	- [Htop](#htop)
-	- [BashTop](#bashtop)
-* [截图类](#截图类)
-	- [Flameshot](#flameshot)
-	- [Scrot](#scrot)
-* [其它类](#其它类)
-	- [Google Chrome](#google-chrome)
-	- [Feh](#feh)
-	- [mpv](#mpv)
-	- [Lazygit](#lazygit)
+<!--more-->
 
 ## 编辑篇
 

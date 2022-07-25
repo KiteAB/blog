@@ -1,11 +1,14 @@
 ---
 title: "Colemak 学习笔记"
 date: 2020-07-09T22:27:09+08:00
-draft: true
 tags: 
     - colemak
     - 日常
 ---
+
+这篇文章介绍了我是怎么从 QWERTY 转到 Colemak 的
+
+<!--more-->
 
 ## 最开始的时候
 

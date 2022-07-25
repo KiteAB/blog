@@ -1,7 +1,5 @@
 # <center>About Me</center>
 
-Last Updated: 2020-12-14 17:15:50
-
 ## 2016
 
 从二年级开始就开始折腾家里的奔腾电脑
@@ -85,3 +83,5 @@ Last Updated: 2020-12-14 17:15:50
 铁废物
 
 不过还是感谢 @chitang233 帮我找回了点什么嘻嘻
+
+Jul 25, 博客 /remake
