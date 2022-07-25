@@ -3,13 +3,96 @@
         <title>emacs - 标签 - K1t3AB&#39;s Blog</title>
         <link>https://blog.kiteab.me/tags/emacs/</link>
         <description>emacs - 标签 - K1t3AB&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
             <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/emacs/" rel="self" type="application/rss+xml" /><item>
     <title>Xah Fly Keys 与 Magit 的组合方案 (Deprecated)</title>
-    <link>https://blog.kiteab.me/posts/emacs-xah-magit/</link>
+    <link>https://blog.kiteab.me/emacs-xah-magit/</link>
     <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
         <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/posts/emacs-xah-magit/</guid>
-    <description><![CDATA[虽然说没几个人把 Xah Fly Keys 和 Magit 放在一起用, 不过还是想讲讲解决一些问题的思路. 遇到问题最近开始尝试使用 Xah Fly Keys, Emacs 的默认键位虽然很好记, 但是还是有点费]]></description>
+    </author><guid>https://blog.kiteab.me/emacs-xah-magit/</guid>
+    <description><![CDATA[<p>虽然说没几个人把 <a href="https://github.com/xahlee/xah-fly-keys" target="_blank" rel="noopener noreffer">Xah Fly Keys</a> 和 <a href="https://github.com/magit/magit" target="_blank" rel="noopener noreffer">Magit</a> 放在一起用, 不过还是想讲讲解决一些问题的思路.</p>
+<h2 id="遇到问题" class="headerLink">
+    <a href="#%e9%81%87%e5%88%b0%e9%97%ae%e9%a2%98" class="header-mark"></a>遇到问题</h2><p>最近开始尝试使用 <code>Xah Fly Keys</code>, Emacs 的默认键位虽然很好记, 但是还是有点费手, 一只手价格还是不菲的 (大雾)</p>
+<p>然后当我配置完 <code>Xah Fly Keys</code> 的基础部分并准备用 <code>Magit</code> 做一个提交的时候, 我发现 <code>Xah Fly Keys</code> 的键位完美地把 <code>Magit</code> 的键位整个覆盖了.</p>
+<h2 id="解决方案" class="headerLink">
+    <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="header-mark"></a>解决方案</h2><p><strong>(包含了完全解决不了和有副作用的方案)</strong></p>
+<h3 id="加钩子函数" class="headerLink">
+    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数</h3><p>嗯, 看起来确实管用, 对吧. 我具体是这样写的:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;magit-mode-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">-1</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>但是当你开心地退出 <code>Magit</code> 之后, 你会开心地发现, <code>Xah Fly Keys</code> <del>不爱你了</del>没有被重新开启, 于是就有了下面一种解决方案&hellip;</p>
+<h3 id="加钩子函数--mini-buffer-钩子函数" class="headerLink">
+    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0--mini-buffer-%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数 + Mini-buffer 钩子函数</h3><p>看起来完全没问题了吧? 不, 我把 Mini-buffer 的钩子函数加在了 <code>Magit</code> 的后面:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;magit-mode-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">-1</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-inactive-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">1</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>(我也不知道怎么写出这么一段的)</p>
+<p>总之这个钩子会在每次使用 Mini-buffer 时触发, 但还是想得太天真了, 毫无用处, 因为这个钩子按理来说就不应该加在这儿&hellip;</p>
+<h3 id="加钩子函数--改-magit-函数" class="headerLink">
+    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0--%e6%94%b9-magit-%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数 + 改 Magit 函数</h3><p>这时候就应该换一个方面想解决方案了&hellip;</p>
+<p>然后我发现我 <code>Magit</code> 的退出函数是绑定到我自己的自定义函数上面的 (你以为是要覆盖 <code>Magit</code> 的自带函数?)</p>
+<p>函数内容如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">kiteab/kill-magit</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">dir</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Kill the buffer about Magit&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">magit-mode-bury-buffer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">null</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">buffer</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">kill-buffer</span> <span class="nv">buffer</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">magit-mode-map</span> <span class="s">&#34;q&#34;</span> <span class="nf">#&#39;</span><span class="nv">kiteab/kill-magit</span><span class="p">)</span> <span class="c1">;; Use a sharp quote when quoting functions</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>意思是关闭所有 <code>Magit</code> 的相关 buffer.</p>
+<p>那么直接在关闭后重新打开 <code>Xah Fly Keys</code> 不就好了?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">kiteab/kill-magit</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">dir</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="s">&#34;Kill the buffer about Magit&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">magit-mode-bury-buffer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">null</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">buffer</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">kill-buffer</span> <span class="nv">buffer</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">magit-mode-map</span> <span class="s">&#34;q&#34;</span> <span class="nf">#&#39;</span><span class="nv">kiteab/kill-magit</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解决!</p>]]></description>
 </item></channel>
 </rss>

@@ -3,76 +3,26 @@
         <title>Tags - 标签 - K1t3AB&#39;s Blog</title>
         <link>https://blog.kiteab.me/tags/</link>
         <description>Tags - 标签 - K1t3AB&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
-            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>elisp</title>
-    <link>https://blog.kiteab.me/tags/elisp/</link>
-    <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/elisp/</guid>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 07 Apr 2019 20:12:26 &#43;0000</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>catmario</title>
+    <link>https://blog.kiteab.me/tags/catmario/</link>
+    <pubDate>Sun, 07 Apr 2019 20:12:26 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://blog.kiteab.me/tags/catmario/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>emacs</title>
-    <link>https://blog.kiteab.me/tags/emacs/</link>
-    <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/emacs/</guid>
+    <title>tas</title>
+    <link>https://blog.kiteab.me/tags/tas/</link>
+    <pubDate>Sun, 07 Apr 2019 20:12:26 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://blog.kiteab.me/tags/tas/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>magit</title>
-    <link>https://blog.kiteab.me/tags/magit/</link>
-    <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/magit/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>arch</title>
-    <link>https://blog.kiteab.me/tags/arch/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/arch/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>archlinux</title>
-    <link>https://blog.kiteab.me/tags/archlinux/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/archlinux/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>linux</title>
-    <link>https://blog.kiteab.me/tags/linux/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/linux/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>备份</title>
-    <link>https://blog.kiteab.me/tags/%E5%A4%87%E4%BB%BD/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/%E5%A4%87%E4%BB%BD/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>还原</title>
-    <link>https://blog.kiteab.me/tags/%E8%BF%98%E5%8E%9F/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/%E8%BF%98%E5%8E%9F/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>转载</title>
-    <link>https://blog.kiteab.me/tags/%E8%BD%AC%E8%BD%BD/</link>
-    <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/%E8%BD%AC%E8%BD%BD/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>常用</title>
-    <link>https://blog.kiteab.me/tags/%E5%B8%B8%E7%94%A8/</link>
-    <pubDate>Fri, 10 Jul 2020 17:36:21 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/tags/%E5%B8%B8%E7%94%A8/</guid>
+    <title>猫里奥</title>
+    <link>https://blog.kiteab.me/tags/%E7%8C%AB%E9%87%8C%E5%A5%A5/</link>
+    <pubDate>Sun, 07 Apr 2019 20:12:26 &#43;0000</pubDate><author>
+        <name>作者</name>
+    </author><guid>https://blog.kiteab.me/tags/%E7%8C%AB%E9%87%8C%E5%A5%A5/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

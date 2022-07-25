@@ -3,20 +3,117 @@
         <title>备份 - 标签 - K1t3AB&#39;s Blog</title>
         <link>https://blog.kiteab.me/tags/%E5%A4%87%E4%BB%BD/</link>
         <description>备份 - 标签 - K1t3AB&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
             <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</lastBuildDate><atom:link href="https://blog.kiteab.me/tags/%E5%A4%87%E4%BB%BD/" rel="self" type="application/rss+xml" /><item>
     <title>Arch 上的备份还原</title>
-    <link>https://blog.kiteab.me/posts/arch-backup-forward/</link>
+    <link>https://blog.kiteab.me/arch-backup-forward/</link>
     <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
         <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/posts/arch-backup-forward/</guid>
-    <description><![CDATA[入坑Arch，主要方便自己查询和刚入坑经常玩挂的朋友，其他发行版应该大同小异 Linux上主要的备份方式 我知道的有 dd 和 tar 相比来说 tar打包显得]]></description>
+    </author><guid>https://blog.kiteab.me/arch-backup-forward/</guid>
+    <description><![CDATA[<p>入坑Arch，主要方便自己查询和刚入坑经常玩挂的朋友，其他发行版应该大同小异</p>
+<p>Linux上主要的备份方式 我知道的有 dd 和 tar</p>
+<p>相比来说 tar打包显得比较灵活，可以用于本机备份恢复，也可以恢复到其他计算机，打包的目录可以完全按自己需要。这里主要介绍tar打包以及本机的恢复。</p>
+<p>tar打包 可以只打包不压缩，速度会比较快，但是你可能会面对一个 好几十G的系统备份包，并不推荐。</p>
+<p>压缩 可以用gzip或者Bzip2 （好像还有其他的，不熟悉，就不做介绍了） 二者相比，gzip速度相对较快，但压缩比率比Bzip2略低。</p>
+<p>我这里并不用这两个软件打包，因为两个都是单线程，打包速度会非常慢。。。曾经用bzip2打包等到天荒地老都没好。。。</p>
+<p>那么重头戏来了！ 偶然的机会知道了一个叫pigz的多线程压缩软件，采用与gzip相同的压缩方式，默认以逻辑CPU的个数的线程进行压缩，具体线程还可以自定义，速度飞快，详细可以百度 pigz。</p>
+<p>那么 tar能不能调用pigz进行压缩呢？ 答案是肯定的！</p>
+<p>看一下tar的man手册</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-I, --use-compress-program=COMMAND
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Filter data through COMMAND. It must accept the -d option,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for decompression. The argument can contain command line
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Options.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>发现tar是可以指定其他压缩程序进行压缩的。</p>
+<p>于是直接 <code>sudo pacman -S pigz</code> 安装（arch官方源就有）下面就可以开始打包了！</p>
+<p>进入根目录 然后执行：</p>
+<p><code>sudo tar --use-compress-program=pigz -cvpf arch-backup.tgz --exclude=/proc --exclude=/lost+found --exclude=/arch-backup.tgz --exclude=/mnt --exclude=/sys --exclude=/run/media /</code></p>
+<p>简单介绍一下命令，&ndash;use-compress-program=pigz 是用pigz压缩，arch-backup.tgz是打包之后的文件名，&ndash;exclude=/xxx是打包时排除的目录，这里简单的排除了一些不需要的目录，具体排除的内容可以根据自己的发行版和需要设定，&ndash;exclude=/arch-backup.tgz 是排除根目录下的自身，因为我是在根目录下进行的操作，如果不排除自身的话，打包可能会进入一个死循环。。。你可能会打出一个巨型包。</p>
+<p>这样就开始进行压缩打包了</p>
+<p>用htop 可以看到 CPU满载，大概3-5分钟左右完成，比起单线程10%多的占用 速度快了不知道多少倍！</p>
+<p>完成候可以看到 28G左右的分区 打包完 是一个15G的压缩包，个头还是很大。。。也算可以接受。。不知道有没有其他办法能够再小点</p>
+<p>打包完成后，你可能会看到一条错误信息，具体原因小白不懂，不过并没有什么影响。然后将备份的包放到一个你觉得安全的地方。</p>
+<p>至此，所有备份工作都已经完成，系统挂了可以用下面的方法恢复</p>
+<hr>
+<p>首先需要准备一个能够引导的liveCD的U盘</p>
+<p>进入liveCD之后 先用wifi-menu联网，因为liveCD上没有pigz，如果不想解压恢复的时候用半年的话就联网装上再解压吧</p>
+<p>Ping一下百度看看是否联网成功，之后简单配置下源 就可以安装pigz了</p>
+<p>sudo nano /etc/pacman.d/mirrorlist 配置源</p>
+<p>安装pigz</p>
+<p>要用到的pigz准备好之后就可以挂载磁盘 进行恢复了。</p>
+<p>lsblk简单看下各个分区情况</p>
+<p>我这里sdc1是boot分区 sdc2是/分区 sdb3是保存备份的分区</p>
+<p>直接新建了一个目录挂载 sdb3</p>
+<p>mkdir /f</p>
+<p>mount /dev/sdb3 /f</p>
+<p>然后挂载 目标linux根分区到/mnt目录， 我的arch只分了 boot和/分区，并且备份的时候 忘记排除boot目录了，所以这里索性都挂载上干掉。挂载之后如图</p>
+<p>现在就可以干掉已经损坏的系统了</p>
+<p><code>rm -rf /mnt/*</code></p>
+<p>命令很危险，一定要看清楚，想清楚了之后再执行，我真是怕小手一抖就把不想干掉的分区干掉了</p>
+<p>这里zsh提示是否确定干掉/mnt上的所有文件 直接y
+boot目录因为是分区挂载点提示设备忙，这个目录并没有被删掉，不过ls一下可以看见/mnt下只剩boot目录，/mnt/boot下所有的引导文件也都没有了</p>
+<p>万事俱备，下面进行解压恢复 还是使用pigz进行多线程解压</p>
+<p>#tar &ndash;use-compress-program=pigz -xvpf /f/sysbackup/arch-backup-20160331.tgz -C /mnt</p>
+<p>这里自行把备份路径替换掉。接下来就是解压过程如图：</p>
+<p>用不了多久 也就2-3分钟 解压完成！(ssd)</p>
+<p>ls看看 干掉的文件是不是都回来了呢</p>
+<p>OK，問題ない！</p>
+<p>到这里，恢复工作已经接近尾声，还记得备份的时候排除掉的目录么，重建排除的目录</p>
+<p>然后直接reboot重启</p>
+<p>前面干掉了 / 分区所有文件真的 大丈夫？</p>
+<p>重启之后 可爱的grub菜单出现了！
+因为我之前把boot一起干掉了，所以看到这里就表面恢复成功了！</p>
+<p>所有备份恢复工作全部完成！</p>
+<p>总结起来，主要是利用了 pigz 的多线程提高 压缩解压的效率，比普通的gzip或者bzip2快很多！缺点还是比较明显，就是备份的包个头略大，不知道怎么能够再小点</p>
+<p>而且我只涉及了本机恢复，如果恢复到其他机子，还涉及到fstab修改之类的一些收尾工作。</p>
+<p>抛砖引玉，如果有其他好的方法 欢迎交流！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">作者：baby_blue_
+</span></span><span class="line"><span class="cl">链接：https://www.jianshu.com/p/b03a51c682a5
+</span></span><span class="line"><span class="cl">来源：简书
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></description>
 </item><item>
     <title>记一次系统出错及备份过程</title>
-    <link>https://blog.kiteab.me/posts/arch-backup/</link>
+    <link>https://blog.kiteab.me/arch-backup/</link>
     <pubDate>Fri, 21 Aug 2020 17:41:24 &#43;0800</pubDate><author>
         <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/posts/arch-backup/</guid>
-    <description><![CDATA[出现错误 解决错误 备份系统 最后 出现错误一个愉快的下午, 我正在玩游戏, 然后我的 Linux 愉快地内存溢出了, 然后内核挺正常地 Crash 掉了, 然后当我重启之后, 我发]]></description>
+    </author><guid>https://blog.kiteab.me/arch-backup/</guid>
+    <description><![CDATA[<p>不知道哪天把 Arch 玩炸了写的</p>
+<h2 id="出现错误" class="headerLink">
+    <a href="#%e5%87%ba%e7%8e%b0%e9%94%99%e8%af%af" class="header-mark"></a>出现错误</h2><p>一个愉快的下午, 我正在玩游戏, 然后我的 Linux 愉快地内存溢出了, 然后内核挺正常地 Crash 掉了, 然后当我重启之后, 我发现我的 Arch Linux 进入了 rootfs 恢复模式, 我当时的心情就好像以前有一次在实机上执行了 <code>sudo rm -rf /*</code> 一样, 一句 fuck 就要脱口而出</p>
+<h2 id="解决错误" class="headerLink">
+    <a href="#%e8%a7%a3%e5%86%b3%e9%94%99%e8%af%af" class="header-mark"></a>解决错误</h2><p>还是同一个不怎么愉快的下午, 我看到屏幕上显示的错误信息貌似是 <code>ERROR: Can't read /dev/sda2 filesystem, use fsck may can fix it. Good Luck!</code>, 意思差不多就是: 不能读取 /dev/sda2 (我的根目录) 的文件系统, 用 <code>fsck</code> 这个工具可能可以修复这个错误, 祝 你 好 运</p>
+<p>那么试试执行 <code>fsck</code> ?</p>
+<p>(PS: <code>fsck</code> 是一个检查与修复 Linux 文件系统的工具)</p>
+<p>然后出现信息让我输入 y/n 来确定是否修复一个块, 这样的信息连着显示了三四个 tty 的整屏……</p>
+<p>修复完成, 重启电脑, 修复完成!</p>
+<h2 id="备份系统" class="headerLink">
+    <a href="#%e5%a4%87%e4%bb%bd%e7%b3%bb%e7%bb%9f" class="header-mark"></a>备份系统</h2><p>经过这么一次事件, 心里还是凉的, 准备整个双内核, 但是麻烦, 于是准备开启定时备份的策略</p>
+<p>在网上搜到了<a href="https://www.jianshu.com/p/b03a51c682a5" target="_blank" rel="noopener noreffer">这么一篇文章</a>, 正好可以满足我的需求, Done!</p>
+<h2 id="最后" class="headerLink">
+    <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>大家真的一定要定时备份系统, 这样即使遇到故障, 也只需要插上备份盘然后恢复就好了, 指不定哪天你的硬盘就坏了呢?</p>]]></description>
 </item></channel>
 </rss>
