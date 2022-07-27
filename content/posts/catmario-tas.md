@@ -1,10 +1,11 @@
 ---
-title: Catmario TAS 教程
+title: CatMario TAS 教程
 date: 2019-04-07 20:12:26
 tags: 
     - tas
     - catmario
     - 猫里奥
+    - 转载
 ---
 
 今天为大家带来一些Catmario TAS（或者说叫NAS）的教程，希望大家也能使用TAS的方法打出让人惊讶的视频与记录！

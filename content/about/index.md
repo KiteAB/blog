@@ -1,87 +1,29 @@
 # <center>About Me</center>
 
-## 2016
+Last Updated: 2022/07/27
 
-从二年级开始就开始折腾家里的奔腾电脑
+准初二铁废物, 男, 没用过变声器
 
-(当然当的是个彻彻底底的脚本小子)
+[个人主页在这里](https://kiteab.me), 多翻翻总能找到你想要的
 
-学的都是微信公众号里的各种软件推荐
+---
 
-## 2018 上半年
+**持续更新**
 
-有了第一台自己的笔电
+FAQs:
 
-升了 Windows 10
+1. 为什么 [Hello World](/hello-world) 前面还有一篇 [CatMario TAS 教程](/catmario-tas)
 
-学了一点 Python 的皮毛
+- 那篇是从前 Hexo 博客转移过来的
 
-## 2018 下半年
+2. 用的是 macOS 吗
 
-了解到了 Ubuntu 和 Linux 的概念
+- [Arch Linux](https://archlinux.org)
+- 桌面环境: [KDE Plasma](https://kde.org)
 
-开始装上并美化其内置的 Gnome (当然美化完之后也没碰过)
+---
 
-## 2019
+Blog Logs:
 
-一次偶然
-
-了解到了 B 站这个平台
-
-做出了第一个黑历史视频 (Python 基础教学)
-
-一次偶然
-
-了解到了 Deepin Linux
-
-(当然装上之后就没用过)
-
-做出了第二个黒历史视频 (Deepin Linux 安装教学)
-
-第二次安装 Ubuntu 后 (见 https://t.bilibili.com/17579690?type=2)
-
-有时候会开始用 Ubuntu 了
-
-开始自学 Linux
-
-## 2020 四月前
-
-了解并使用 Arch Linux 和 Vim
-
-投入 Linux 的怀抱
-
-(本来打算格掉 Windows 10
-
-可惜上面东西太杂了不好弄
-
-不然就不用把硬盘空间省着用了)
-
-## 2020 四月
-
-在某群群友的怂恿下
-
-在 `sudo rm -rf /*` 后面按下了回车
-
-谁知道 `sudo` 把我的密码记忆下来了
-
-就有了 Arch Linux 的第二次安装
-
-## 至今
-
-学习 Emacs
-
-学习 C++
-
-学习操作系统
-
-学习生活技巧
-
-也许是这样?
-
-## 2022 下半旬
-
-铁废物
-
-不过还是感谢 @chitang233 帮我找回了点什么嘻嘻
-
-Jul 25, 博客 /remake
+- Jul 25, 博客第三次 `/remake`
+- Jul 27, 移除了一些完全无用的文章, 后续会开始恢复文章更新
