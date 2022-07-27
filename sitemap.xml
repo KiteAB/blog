@@ -2,21 +2,16 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://blog.kiteab.me/tags/elisp/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/tags/emacs/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/tags/magit/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/posts/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/tags/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/emacs-xah-magit/</loc><lastmod>2020-12-13T20:52:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/arch/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/arch-backup-forward/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/archlinux/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://blog.kiteab.me/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/linux/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://blog.kiteab.me/posts/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://blog.kiteab.me/tags/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/%E5%A4%87%E4%BB%BD/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/%E8%BF%98%E5%8E%9F/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/%E8%BD%AC%E8%BD%BD/</loc><lastmod>2020-08-21T18:09:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://blog.kiteab.me/arch-backup/</loc><lastmod>2020-08-21T17:41:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/arch-software/</loc><lastmod>2020-07-10T17:36:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/%E5%B8%B8%E7%94%A8/</loc><lastmod>2020-07-10T17:36:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://blog.kiteab.me/tags/%E8%BD%AF%E4%BB%B6/</loc><lastmod>2020-07-10T17:36:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

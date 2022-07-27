@@ -1,4 +1,4 @@
-# Catmario TAS 教程
+# CatMario TAS 教程
 
 
 今天为大家带来一些Catmario TAS（或者说叫NAS）的教程，希望大家也能使用TAS的方法打出让人惊讶的视频与记录！

@@ -4,99 +4,9 @@
         <link>https://blog.kiteab.me/</link>
         <description>不知道花几小时堆出来的破烂</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>kiteab233@proton.me (K1t3AB)</managingEditor>
-            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</lastBuildDate>
+            <webMaster>kiteab233@proton.me (K1t3AB)</webMaster><lastBuildDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</lastBuildDate>
             <atom:link href="https://blog.kiteab.me/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Xah Fly Keys 与 Magit 的组合方案 (Deprecated)</title>
-    <link>https://blog.kiteab.me/emacs-xah-magit/</link>
-    <pubDate>Sun, 13 Dec 2020 20:52:42 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/emacs-xah-magit/</guid>
-    <description><![CDATA[<p>虽然说没几个人把 <a href="https://github.com/xahlee/xah-fly-keys" target="_blank" rel="noopener noreffer">Xah Fly Keys</a> 和 <a href="https://github.com/magit/magit" target="_blank" rel="noopener noreffer">Magit</a> 放在一起用, 不过还是想讲讲解决一些问题的思路.</p>
-<h2 id="遇到问题" class="headerLink">
-    <a href="#%e9%81%87%e5%88%b0%e9%97%ae%e9%a2%98" class="header-mark"></a>遇到问题</h2><p>最近开始尝试使用 <code>Xah Fly Keys</code>, Emacs 的默认键位虽然很好记, 但是还是有点费手, 一只手价格还是不菲的 (大雾)</p>
-<p>然后当我配置完 <code>Xah Fly Keys</code> 的基础部分并准备用 <code>Magit</code> 做一个提交的时候, 我发现 <code>Xah Fly Keys</code> 的键位完美地把 <code>Magit</code> 的键位整个覆盖了.</p>
-<h2 id="解决方案" class="headerLink">
-    <a href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88" class="header-mark"></a>解决方案</h2><p><strong>(包含了完全解决不了和有副作用的方案)</strong></p>
-<h3 id="加钩子函数" class="headerLink">
-    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数</h3><p>嗯, 看起来确实管用, 对吧. 我具体是这样写的:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;magit-mode-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">-1</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>但是当你开心地退出 <code>Magit</code> 之后, 你会开心地发现, <code>Xah Fly Keys</code> <del>不爱你了</del>没有被重新开启, 于是就有了下面一种解决方案&hellip;</p>
-<h3 id="加钩子函数--mini-buffer-钩子函数" class="headerLink">
-    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0--mini-buffer-%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数 + Mini-buffer 钩子函数</h3><p>看起来完全没问题了吧? 不, 我把 Mini-buffer 的钩子函数加在了 <code>Magit</code> 的后面:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;magit-mode-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">-1</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-inactive-hook</span> <span class="nf">#&#39;</span><span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span> <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span> <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">1</span><span class="p">)))</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>(我也不知道怎么写出这么一段的)</p>
-<p>总之这个钩子会在每次使用 Mini-buffer 时触发, 但还是想得太天真了, 毫无用处, 因为这个钩子按理来说就不应该加在这儿&hellip;</p>
-<h3 id="加钩子函数--改-magit-函数" class="headerLink">
-    <a href="#%e5%8a%a0%e9%92%a9%e5%ad%90%e5%87%bd%e6%95%b0--%e6%94%b9-magit-%e5%87%bd%e6%95%b0" class="header-mark"></a>加钩子函数 + 改 Magit 函数</h3><p>这时候就应该换一个方面想解决方案了&hellip;</p>
-<p>然后我发现我 <code>Magit</code> 的退出函数是绑定到我自己的自定义函数上面的 (你以为是要覆盖 <code>Magit</code> 的自带函数?)</p>
-<p>函数内容如下:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">kiteab/kill-magit</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">dir</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="s">&#34;Kill the buffer about Magit&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">magit-mode-bury-buffer</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">null</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">buffer</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">kill-buffer</span> <span class="nv">buffer</span><span class="p">))))</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">magit-mode-map</span> <span class="s">&#34;q&#34;</span> <span class="nf">#&#39;</span><span class="nv">kiteab/kill-magit</span><span class="p">)</span> <span class="c1">;; Use a sharp quote when quoting functions</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>意思是关闭所有 <code>Magit</code> 的相关 buffer.</p>
-<p>那么直接在关闭后重新打开 <code>Xah Fly Keys</code> 不就好了?</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">kiteab/kill-magit</span> <span class="p">(</span><span class="kp">&amp;optional</span> <span class="nv">dir</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="s">&#34;Kill the buffer about Magit&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">interactive</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">magit-mode-bury-buffer</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nf">null</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nb">dolist</span> <span class="p">(</span><span class="nv">buffer</span> <span class="p">(</span><span class="nv">magit-mode-get-buffers</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">kill-buffer</span> <span class="nv">buffer</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">xah-fly-keys</span> <span class="mi">1</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">magit-mode-map</span> <span class="s">&#34;q&#34;</span> <span class="nf">#&#39;</span><span class="nv">kiteab/kill-magit</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>解决!</p>]]></description>
-</item><item>
     <title>Arch 上的备份还原</title>
     <link>https://blog.kiteab.me/arch-backup-forward/</link>
     <pubDate>Fri, 21 Aug 2020 18:09:40 &#43;0800</pubDate><author>
@@ -187,26 +97,6 @@ boot目录因为是分区挂载点提示设备忙，这个目录并没有被删�
 </span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
-</item><item>
-    <title>记一次系统出错及备份过程</title>
-    <link>https://blog.kiteab.me/arch-backup/</link>
-    <pubDate>Fri, 21 Aug 2020 17:41:24 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/arch-backup/</guid>
-    <description><![CDATA[<p>不知道哪天把 Arch 玩炸了写的</p>
-<h2 id="出现错误" class="headerLink">
-    <a href="#%e5%87%ba%e7%8e%b0%e9%94%99%e8%af%af" class="header-mark"></a>出现错误</h2><p>一个愉快的下午, 我正在玩游戏, 然后我的 Linux 愉快地内存溢出了, 然后内核挺正常地 Crash 掉了, 然后当我重启之后, 我发现我的 Arch Linux 进入了 rootfs 恢复模式, 我当时的心情就好像以前有一次在实机上执行了 <code>sudo rm -rf /*</code> 一样, 一句 fuck 就要脱口而出</p>
-<h2 id="解决错误" class="headerLink">
-    <a href="#%e8%a7%a3%e5%86%b3%e9%94%99%e8%af%af" class="header-mark"></a>解决错误</h2><p>还是同一个不怎么愉快的下午, 我看到屏幕上显示的错误信息貌似是 <code>ERROR: Can't read /dev/sda2 filesystem, use fsck may can fix it. Good Luck!</code>, 意思差不多就是: 不能读取 /dev/sda2 (我的根目录) 的文件系统, 用 <code>fsck</code> 这个工具可能可以修复这个错误, 祝 你 好 运</p>
-<p>那么试试执行 <code>fsck</code> ?</p>
-<p>(PS: <code>fsck</code> 是一个检查与修复 Linux 文件系统的工具)</p>
-<p>然后出现信息让我输入 y/n 来确定是否修复一个块, 这样的信息连着显示了三四个 tty 的整屏……</p>
-<p>修复完成, 重启电脑, 修复完成!</p>
-<h2 id="备份系统" class="headerLink">
-    <a href="#%e5%a4%87%e4%bb%bd%e7%b3%bb%e7%bb%9f" class="header-mark"></a>备份系统</h2><p>经过这么一次事件, 心里还是凉的, 准备整个双内核, 但是麻烦, 于是准备开启定时备份的策略</p>
-<p>在网上搜到了<a href="https://www.jianshu.com/p/b03a51c682a5" target="_blank" rel="noopener noreffer">这么一篇文章</a>, 正好可以满足我的需求, Done!</p>
-<h2 id="最后" class="headerLink">
-    <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>大家真的一定要定时备份系统, 这样即使遇到故障, 也只需要插上备份盘然后恢复就好了, 指不定哪天你的硬盘就坏了呢?</p>]]></description>
 </item><item>
     <title>Arch Linux 常用软件</title>
     <link>https://blog.kiteab.me/arch-software/</link>
@@ -352,7 +242,7 @@ boot目录因为是分区挂载点提示设备忙，这个目录并没有被删�
 </div>
 </div>]]></description>
 </item><item>
-    <title>Catmario TAS 教程</title>
+    <title>CatMario TAS 教程</title>
     <link>https://blog.kiteab.me/catmario-tas/</link>
     <pubDate>Sun, 07 Apr 2019 20:12:26 &#43;0000</pubDate><author>
         <name>K1t3AB</name>

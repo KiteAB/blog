@@ -95,25 +95,5 @@ boot目录因为是分区挂载点提示设备忙，这个目录并没有被删�
 </span></span></code></pre></td></tr></table>
 </div>
 </div>]]></description>
-</item><item>
-    <title>记一次系统出错及备份过程</title>
-    <link>https://blog.kiteab.me/arch-backup/</link>
-    <pubDate>Fri, 21 Aug 2020 17:41:24 &#43;0800</pubDate><author>
-        <name>K1t3AB</name>
-    </author><guid>https://blog.kiteab.me/arch-backup/</guid>
-    <description><![CDATA[<p>不知道哪天把 Arch 玩炸了写的</p>
-<h2 id="出现错误" class="headerLink">
-    <a href="#%e5%87%ba%e7%8e%b0%e9%94%99%e8%af%af" class="header-mark"></a>出现错误</h2><p>一个愉快的下午, 我正在玩游戏, 然后我的 Linux 愉快地内存溢出了, 然后内核挺正常地 Crash 掉了, 然后当我重启之后, 我发现我的 Arch Linux 进入了 rootfs 恢复模式, 我当时的心情就好像以前有一次在实机上执行了 <code>sudo rm -rf /*</code> 一样, 一句 fuck 就要脱口而出</p>
-<h2 id="解决错误" class="headerLink">
-    <a href="#%e8%a7%a3%e5%86%b3%e9%94%99%e8%af%af" class="header-mark"></a>解决错误</h2><p>还是同一个不怎么愉快的下午, 我看到屏幕上显示的错误信息貌似是 <code>ERROR: Can't read /dev/sda2 filesystem, use fsck may can fix it. Good Luck!</code>, 意思差不多就是: 不能读取 /dev/sda2 (我的根目录) 的文件系统, 用 <code>fsck</code> 这个工具可能可以修复这个错误, 祝 你 好 运</p>
-<p>那么试试执行 <code>fsck</code> ?</p>
-<p>(PS: <code>fsck</code> 是一个检查与修复 Linux 文件系统的工具)</p>
-<p>然后出现信息让我输入 y/n 来确定是否修复一个块, 这样的信息连着显示了三四个 tty 的整屏……</p>
-<p>修复完成, 重启电脑, 修复完成!</p>
-<h2 id="备份系统" class="headerLink">
-    <a href="#%e5%a4%87%e4%bb%bd%e7%b3%bb%e7%bb%9f" class="header-mark"></a>备份系统</h2><p>经过这么一次事件, 心里还是凉的, 准备整个双内核, 但是麻烦, 于是准备开启定时备份的策略</p>
-<p>在网上搜到了<a href="https://www.jianshu.com/p/b03a51c682a5" target="_blank" rel="noopener noreffer">这么一篇文章</a>, 正好可以满足我的需求, Done!</p>
-<h2 id="最后" class="headerLink">
-    <a href="#%e6%9c%80%e5%90%8e" class="header-mark"></a>最后</h2><p>大家真的一定要定时备份系统, 这样即使遇到故障, 也只需要插上备份盘然后恢复就好了, 指不定哪天你的硬盘就坏了呢?</p>]]></description>
 </item></channel>
 </rss>
