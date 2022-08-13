@@ -1,7 +1,7 @@
 # 
 
 # <center>友情链接</center>
-# <center><img src="https://chitang-main-1256617490.cos.ap-shanghai.myqcloud.com/images/avatar.webp" width = "35" height = "35" alt="chitang233"/> [池塘の博客](https://blog.chitang.dev)</center>
+# <center><img src="https://chitangcos.zyglq.cn/images/avatar.webp" width = "35" height = "35" alt="chitang233"/> [池塘の博客](https://blog.chitang.dev)</center>
 # <center><img src="https://blog.coelacanthus.moe/icon.png" width = "35" height = "35" alt="ayalhw"/> [倚窗, 听雨](https://blog.coelacanthus.moe)</center>
 # <center><img src="https://avatars3.githubusercontent.com/u/52870917?s=400&v=4" width = "35" height = "35" alt="herschel-ma"/> [Herschel 的个人站点](http://39.101.213.182)</center>
 # <center><img src="https://blog.dianas.cyou/img/favicon.png" width = "35" height = "35" alt="jasmine"/> [Jasmine Blog](https://blog.dianas.cyou)</center>
